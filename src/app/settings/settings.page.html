@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <img src="assets/logoplaceholder.png" alt="logo" height="95vh" style="margin-right:0">
+        </ion-col>
+        <ion-col style="margin: 0;">
+          <ion-row>
+            <h1 style="font-size: medium; ma">Correction Dose Calculator</h1>
+          </ion-row>
+          <ion-row>
+            <h2 style="font-size: small; margin-top: 2%;">Keep Your Dose Amount Just Right</h2>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="text-align: center; position: relative;">
+    <ion-row>
+      <ion-col>
+        <h1>Locked</h1>
+      </ion-col>
+      <ion-col >
+        <ion-toggle [(ngModel)]="lock" style="position: absolute; top:50%;left:50%; transform: translate(-50%,-50%)"></ion-toggle>
+      </ion-col>
+      <ion-col>
+        <h1>Unlocked</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="line"></div>
+  <ion-grid style="font-size:35px !important; text-align: center; position: relative;">
+    <ion-row>
+      <ion-col>
+        <div style="padding-top: 3vh; padding-left: 8vw;">ICR</div><br>
+      </ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="ICR" class="maininput" type="number"></ion-input><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="padding-top: 3vh; padding-left: 8vw;">ISF</div><br>
+      </ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="ISF" class="maininput" type="number"></ion-input><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div style="padding-top: 3vh; padding-left: 8vw;">TBS</div>
+      </ion-col>
+      <ion-col>
+        <ion-input [(ngModel)]="TBS" class="maininput" type="number"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button (click)="saveSV()" expand="block" style="font-size: 20pt; height:fit-content;width: 40%; padding: 2%; margin: auto;" size="large">SAVE</ion-button>
+  <div class="line"></div>
+  <div style="margin-left:5%;" >
+    <p>
+      - For any problems or questions, please don't hesitate to contact us by e-mail.<br>
+      - Also feedback is appreciated.
+    </p>
+    <h1 style="text-align: center;">CDC@moh.com</h1>
+  </div>
+</ion-content>
