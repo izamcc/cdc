@@ -18,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content onload="preload()">
   <ion-grid style="text-align: center; position: relative;">
     <ion-row>
       <ion-col>
@@ -60,6 +60,8 @@
     </ion-row>
   </ion-grid>
   <ion-button (click)="saveSV()" expand="block" style="font-size: 20pt; height:fit-content;width: 40%; padding: 2%; margin: auto;" size="large">SAVE</ion-button>
+  <!-- <ion-button (click)="preload()" expand="block" style="font-size: 20pt; height:fit-content;width: 40%; padding: 2%; margin: auto;" size="large">get prv</ion-button>
+  <ion-button (click)="saveSV2()" expand="block" style="font-size: 20pt; height:fit-content;width: 40%; padding: 2%; margin: auto;" size="large">consol.log 3</ion-button> -->
   <div class="line"></div>
   <div style="margin-left:5%;" >
     <p>

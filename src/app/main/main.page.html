@@ -1,28 +1,32 @@
 <ion-header>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </ion-header>
 
-<ion-content style="background-color: red !important;">
+<ion-content onload="preload()" style="color: white !important;">
   <h1>Correction Dose Calculator</h1>
-  <ion-grid style="text-align: center; margin: auto; margin-top: 10%;">
+  <ion-grid style="text-align: center; margin: auto; margin-top: 10%; color: white !important;">
     <ion-row>
-      <ion-col style="padding-left: 5%; !important">
+      <ion-col style="padding: 0; !important">
         <ion-label>Currnt Blood<br> Sugar</ion-label>
         <ion-input class="maininput" type="number" [(ngModel)]="CBS"></ion-input>
       </ion-col>
-      <ion-col>
+      <!-- <ion-col>
         <div style="border: 1px solid; border-color: red; height: 18vh; width: 0; margin: auto; margin-top: 2vh;"></div>
-      </ion-col>
-      <ion-col style="padding-right: 5%; !important">
+      </ion-col> -->
+      <ion-col style="padding: 0; !important">
         <ion-label>Meal Carbs <br> Amount</ion-label>
-        <ion-input class="maininput" type="number" [(ngModel)]="MCA"></ion-input>
+        <ion-input  class="maininput" type="number" [(ngModel)]="MCA"></ion-input>
       </ion-col>
     </ion-row>
   </ion-grid>
   <div style="border: 1px solid; border-color: red; height: 0px; width: 90%; margin: auto; margin-top: 5%;"></div>
   <ion-button (click)="calculateunits()" expand="block" style="font-size: 20pt; height:fit-content;width: 50%; padding: 2%; margin: auto;" size="large"> Calculat Units</ion-button>
   <br>
-  <ion-label style="margin-left: 8%; font-size: 25pt; margin-top: 10%;">You need :</ion-label>
-  <div id="units" type="number"></div>
-  <img src="assets/settingswheel.jpg" (click)="gotosettings()" alt=" settings icon" style=" height: 8vh; width: auto; margin-left: 80%; margin-top: 5vh; ">
+  <ion-label style="color: white !important; margin-left: 8%; font-size: 25pt; margin-top: 10%;">You need :</ion-label>
+  <div id="units" type="number">{{ TIpM }} Units</div>
+  <img id="simg" class="crossRotate animate__rotateIn" src="assets/settingswheel.png" (click)="gotosettings()" alt=" settings icon" style=" height: 8vh; width: auto; margin-left: 80%; margin-top: 5vh; ">
 
 </ion-content>

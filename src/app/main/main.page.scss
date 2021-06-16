@@ -1,6 +1,29 @@
 h1{
   text-align: center;
+  color: white !important;
 }
+#simg {
+  display: block;
+  margin: 20px;
+}
+
+.crossRotate {
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+   transition-duration: 2s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+   transition-property: transform;
+}
+
+.crossRotate:hover {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+   transform: rotate(180deg);
+}
+
 ion-content{
    --ion-background-color:#181a1b;
  }
@@ -8,14 +31,23 @@ ion-content{
 .maininput{
   background-color: gray;
   height: 15vh;
-  width: 35vw;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 0px;
   text-align: center;
   font-size: 30pt;
   margin-top: 5%;
+  margin-left: 0 ;
+  margin-right: 0;
+}
+.maininput:hover{
+  box-shadow: inset 0 0 10px -5px black;
 }
 
 #units{
+  color: white !important;
+  text-align: center;
+  font-size: 35pt;
+  padding-top: 30%;
   background-color: gray;
   height: 35%;
   width: 90%;
